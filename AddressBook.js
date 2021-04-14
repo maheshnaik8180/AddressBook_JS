@@ -109,5 +109,14 @@ class Contact
     }
 }
 
-let contact = new Contact("Mahesh", "Naik", "Vidyanagar", "Gadhinglaj", "Maharashtra", 416502, 9855512321, "nmahesh@gmail.com");
-console.log(contact.toString()); 
+let addressBook = new Array();
+try
+{
+addressBook.push(new Contact("Mahesh", "Naik", "Vidyanagar", "Gadhinglaj", "Maharashtra", 416502, 9855512321, "nmahesh@gmail.com"));
+addressBook.push(new Contact("Omkar", "Mali", "Panvel", "Mumbai", "Maharashtra", 129800, 9823442211, "ironman@gmail.com"));
+}
+catch (e)
+{
+    console.log(e);
+}
+addressBook.forEach(Contact => console.log(Contact.toString()));
