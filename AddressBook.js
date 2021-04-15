@@ -124,8 +124,18 @@ addressBook.forEach(Contact => console.log(Contact.toString()));
 let contact = searchPerson("Omkar", addressBook);
 updateContact(contact, "Zip", 332244);
 console.log("updated contact: " + contact.toString());
-deleteContact("Omkar", addressBook);
-addressBook.forEach(contact => console.log(contact.toString()));
+
+let addressBook1 = deleteContact("Omkar", addressBook);
+console.log("Contact list after delete opteration")
+addressBook1.forEach(contact => console.log(contact.toString()));
+console.log("No. of Contacts: " + countEntries(addressBook1));
+
+function countEntries(addressBook)
+{
+    return addressBook.reduce(count => count+1, 0);
+}
+
+
 
 function searchPerson(personName, addressBook)
 {
