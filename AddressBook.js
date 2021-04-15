@@ -124,7 +124,7 @@ addressBook.forEach(Contact => console.log(Contact.toString()));
 let contact = searchPerson("Omkar", addressBook);
 updateContact(contact, "Zip", 332244);
 console.log("updated contact: " + contact.toString());
-deleteContact("Tushar", addressBook);
+deleteContact("Omkar", addressBook);
 addressBook.forEach(contact => console.log(contact.toString()));
 
 function searchPerson(personName, addressBook)
